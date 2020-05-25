@@ -19,7 +19,7 @@
     "start": "stencil build --dev --watch --es5 --docs",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "lint:ts": "eslint src/**/*{.ts,.tsx}",
+    "lint:ts": "eslint src/**/*.{ts,tsx}",
     "lint:sass": "stylelint 'src/**/*.scss'",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
