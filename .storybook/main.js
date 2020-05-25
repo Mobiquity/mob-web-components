@@ -10,7 +10,14 @@ const PROJECT_NAME = "mob-web-components";
 
 module.exports = {
   stories: ["../src/**/*.stories.js"],
-  addons: ["@storybook/addon-notes/register"],
+  addons: [
+    "@storybook/addon-notes/register",
+    "@storybook/addon-knobs/register",
+    "@storybook/addon-actions/register",
+    "@storybook/addon-backgrounds/register",
+    "@storybook/addon-viewport/register",
+    "@storybook/addon-a11y/register",
+  ],
   // Custom webpack config to tell Storybook where to find the compiled files from Stencil
   async webpackFinal(config) {
     config.entry.push(path.join(__dirname, OUTPUT_DIR, `${PROJECT_NAME}.js`));
