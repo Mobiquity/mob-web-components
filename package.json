@@ -42,9 +42,20 @@
     "copy-webpack-plugin": "^6.0.1",
     "eslint": "^7.1.0",
     "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
     "write-file-webpack-plugin": "^4.5.1"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js}": "eslint --cache",
+    "src/**/*.{js,css,md,ts,tsx}": "prettier"
+  }
 }
