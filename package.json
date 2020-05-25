@@ -1,5 +1,5 @@
 {
-  "name": "mob-web-components",
+  "name": "@mobiquity/mob-web-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -16,13 +16,22 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "start": "stencil build --dev --watch --es5 --docs",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@stencil/core": "^1.13.0"
+    "@babel/core": "^7.9.6",
+    "@stencil/core": "^1.13.0",
+    "@storybook/addon-notes": "^5.3.19",
+    "@storybook/html": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "write-file-webpack-plugin": "^4.5.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
